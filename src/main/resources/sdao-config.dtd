@@ -1,0 +1,10 @@
+<!ELEMENT sdao-config (datasource,show_sql?)>
+<!ELEMENT datasource (base_property,base_property,base_property,base_property,property*)>
+<!ATTLIST datasource type (jdbc|c3p0) #REQUIRED>
+<!ELEMENT base_property EMPTY>
+<!ATTLIST base_property name (driverClass|jdbcUrl|username|password) #REQUIRED>
+<!ATTLIST base_property value CDATA #REQUIRED>
+<!ELEMENT property EMPTY>
+<!ATTLIST property name (initialPoolSize|minPoolSize|maxPoolSize|acquireIncrement|maxIdleTime|idleConnectionTestPeriod|acquireRetryAttempts|acquireRetryDelay) #REQUIRED>
+<!ATTLIST property value CDATA #REQUIRED>
+<!ELEMENT show_sql (#PCDATA)>
